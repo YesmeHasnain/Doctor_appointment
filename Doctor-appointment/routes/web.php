@@ -14,15 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index-1');
 });
 
+Route::get('/admin', function () {
+    return view('admin.tables-basic');
+});
+
+Route::get('/Dashboard', function () {
+    return view('');
+});
+
+// Jet stream route
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('index-1');
+        return view('admin.Dashboard');
     })->name('dashboard');
 });
+
+// jet stream route end
+
+
+
