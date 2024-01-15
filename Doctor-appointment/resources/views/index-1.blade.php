@@ -274,7 +274,6 @@
         </div>
     </div>
     <!-- End Our Services -->
-
     <!-- Star Feature Entry Area
     ============================================= -->
     <div class="feature-entry-area bg-gray default-padding-bottom bottom-less">

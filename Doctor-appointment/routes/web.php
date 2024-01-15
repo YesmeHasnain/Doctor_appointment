@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('index-1');
 });
 
-Route::get('/admin', function () {
+Route::get('/Allinfo', function () {
     return view('admin.tables-basic');
 });
 
@@ -37,6 +37,10 @@ Route::middleware([
 });
 
 // jet stream route end
+
+// User datafetching admintable using admin controller 
+Route::get('/AllPatient',[AdminController::class,'UserRecord']);
+
 
 
 
